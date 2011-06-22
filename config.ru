@@ -1,0 +1,2 @@
+require 'wishlist'
+run Wishlist
