@@ -4,6 +4,10 @@ require 'nokogiri'
 require 'open-uri'
 
 class Wishlist < Sinatra::Base
+  get '/' do 
+    ''
+  end
+
   get '/:profile' do
     doc = Nokogiri::HTML(open(URI.encode("http://steamcommunity.com/id/#{params[:profile]}/wishlist/?xml=1")))
     content_type 'text/xml'
